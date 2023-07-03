@@ -1,0 +1,97 @@
+:root {
+    --white: #ffffff;
+    --lightGray: #eeeeee;
+    --yellow: #f6c90e;
+    --gray: #3a4750;
+    --darkGray: #303841;
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 200px auto;
+  }
+  
+  .card {
+    position: relative;
+    width:800px;
+    height: 500px;
+    background-image: url(https://images.unsplash.com/photo-1664923000175-dee661f00437?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njc1MTEyMDI&ixlib=rb-4.0.3&q=80);
+    background-size: cover;
+    border-radius: 12px;
+    margin: 0 50px;
+    box-shadow: 3px 3px 10px -1px rgba(0, 0, 0, 0.35);
+    transition: 0.5s ease;
+  }
+  
+  .card-title {
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+    color: rgb(60, 60, 60);
+    border-bottom: 2px var(--yellow) solid;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 800px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0px;
+    border-radius: 12px;
+    background-color: rgba(32, 32, 32, 0.5);
+    backdrop-filter: blur(10px);
+    transition: 0.5s ease-out;
+    opacity: 0;
+  }
+  
+  .overlay-text {
+    position: relative;
+   font-size: 24px;
+    margin: 0px 50px;
+    text-align: center;
+    color: var(--white);
+  }
+  
+  .overlay-text h2 {
+    margin-bottom: 10px;
+  }
+  
+  .overlay button {
+    padding: 0.5rem 1rem;
+    background-color: var(--yellow);
+    border: none;
+    border-radius: 5px;
+    color: var(--darkGray);
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.4s ease;
+  }
+  
+  .overlay button:hover {
+    filter: brightness(0.65);
+  }
+  
+  .overlay button:active {
+    filter: brightness(0.5);
+    transform: scale(0.97);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .overlay:hover {
+    opacity: 1;
+  }
+  
